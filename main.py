@@ -43,7 +43,7 @@ def main():
         for asteroid in asteroids:
             for bullet in shots:
                 if asteroid.check_collide(bullet):
-                    asteroid.kill()
+                    asteroid.split()
                     bullet.kill()
         pg.display.flip()
         dt = clock.tick(60) / 1000
