@@ -19,7 +19,7 @@ class Asteroid(CircleShape):
         if self.radius <= ASTEROID_MIN_RADIUS:
             return
 
-        self.velocity.rotate(random.uniform(20, 50))
+        self.velocity = self.velocity.rotate(random.uniform(20, 50))
 
         for i in range(-1, 2, 2):
             child = Asteroid(*self.position, self.radius - ASTEROID_MIN_RADIUS)
